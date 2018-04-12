@@ -382,6 +382,11 @@
         <command>kfmclient openProfile filemanagement</command>
       </action>
     </keybind>
+    <keybind key="C-A-t">
+      <action name="Execute">
+          <command>xterm</command>
+      </action>
+    </keybind>
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>
