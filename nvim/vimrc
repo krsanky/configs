@@ -1,0 +1,89 @@
+" THIS is for reference from vim to nvim 
+let mapleader=","
+set nocompatible
+
+let g:python_recommended_style = 0
+
+"vimliveit:
+inoremap ^[OA <nop>
+vnoremap ^[OA <nop>
+inoremap ^[OB <nop>
+vnoremap ^[OB <nop>
+inoremap ^[OD <nop>
+vnoremap ^[OD <nop>
+inoremap ^[OC <nop>
+vnoremap ^[OC <nop>
+inoremap <up> <nop>
+vnoremap <up> <nop>
+inoremap <down> <nop>
+vnoremap <down> <nop>
+inoremap <left> <nop>
+vnoremap <left> <nop>
+inoremap <right> <nop>
+vnoremap <right> <nop>
+
+set nu
+set nowrap
+
+" -- tabstuff ----------------
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set sts=4
+autocmd BufRead,BufNewFile *.jsp setlocal ts=2 sw=2 sts=2
+autocmd BufRead,BufNewFile *.html setlocal ts=2 sw=2 sts=2
+" -- end tabstuff ------------
+
+set backspace=2
+set modeline
+set ls=2
+set ruler
+set showmode
+set showcmd
+set display=truncate
+set scrolloff=5
+
+"?????????????
+set ve=all,onemore 
+
+"set autoindent
+"set cindent
+
+set incsearch hlsearch
+set ignorecase
+set smartcase
+
+" Press space to clear search highlighting and any message already displayed.
+nnoremap <silent> <Space> :silent noh<Bar>echo<CR>
+
+set background=dark
+
+" ??? nnoremap <F8> :setl noai nocin nosi inde=<CR>
+
+"set t_Co=256
+
+set noerrorbells
+
+map <C-j> :bprev<CR>
+map <C-k> :bnext<CR>
+set hidden
+
+"colorscheme elflord
+"colorscheme koehler
+"colorscheme murphy
+"colorscheme vividchalk
+colorscheme desert
+
+set wildmode=longest,list,full
+set wildmenu
+
+execute pathogen#infect()
+syntax on
+syntax sync minlines=1800
+filetype plugin indent on
+
+autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
+autocmd BufNewFile,BufRead *.py setlocal expandtab tabstop=4 shiftwidth=4
+
+au BufNewFile,BufRead *.html set filetype=htmldjango
+
