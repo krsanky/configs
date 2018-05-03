@@ -7,6 +7,8 @@ XTerm*loginShell: true
 XTerm*font: -*-terminus-medium-*-*-*-17-*-*-*-*-*-iso10646-1
 !XTerm*boldFont: -*-terminus-medium-*-*-*-17-*-*-*-*-*-iso10646-1
 !XTerm*boldMode: false 
+!XTerm*geometry: COLUMNSxROWS+X+Y
+XTerm*geometry: 100x30+380+90
 
 *background: rgb:00/00/00
 *foreground: rgb:d0/d0/d0

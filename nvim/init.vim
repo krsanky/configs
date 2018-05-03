@@ -1,3 +1,5 @@
+set paste
+
 set nu
 set ruler
 set showmode
@@ -32,7 +34,7 @@ colorscheme peachpuff
 
 nnoremap <silent> <Space> :silent noh<Bar>echo<CR>
 
-set hidden
+set hidden "lets you change buffers w/o saving ?
 
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
 let g:python_recommended_style = 0
