@@ -351,6 +351,7 @@
   <item label="sakura"><action name="Execute"><command>sakura -l</command></action></item>
   <item label="lxterminal"><action name="Execute"><command>lxterminal -l</command></action></item>
   <item label="firefox"><action name="Execute"><command>firefox</command></action></item>
+  <item label="chrome"><action name="Execute"><command>chrome</command></action></item>
   <item label="arduino"><action name="Execute"><command>arduino</command></action></item>
 <!--
   <separator label="Applications" />

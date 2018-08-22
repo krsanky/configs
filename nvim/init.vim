@@ -1,11 +1,11 @@
-set paste
-
+"set paste "messes with expandtab
 set nu
 set ruler
 set showmode
 set showcmd
 set modeline
 set bs=2
+set nowrap
 
 set expandtab
 set tabstop=4
@@ -36,13 +36,12 @@ nnoremap <silent> <Space> :silent noh<Bar>echo<CR>
 
 set hidden "lets you change buffers w/o saving ?
 
-autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
+autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
 let g:python_recommended_style = 0
 autocmd BufNewFile,BufRead *.py setlocal expandtab tabstop=4 shiftwidth=4
 
 au BufNewFile,BufRead *.html set filetype=htmldjango
 
 
-
-
+"syntax off
 
