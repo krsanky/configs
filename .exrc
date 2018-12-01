@@ -1,3 +1,4 @@
+set exrc
 set ignorecase
 set autoindent
 set autowrite
