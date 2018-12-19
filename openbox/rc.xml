@@ -387,6 +387,11 @@
           <command>xterm</command>
       </action>
     </keybind>
+    <keybind key="C-A-u">
+      <action name="Execute">
+          <command>urxvt</command>
+      </action>
+    </keybind>
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>

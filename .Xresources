@@ -29,5 +29,8 @@ XTerm*geometry: 100x30+380+90
 !*color14:    rgb:71/be/be
 !*color15:    rgb:ff/ff/ff
 
-
+URxvt.loginShell: true
+URxvt*font: -*-terminus-medium-*-*-*-17-*-*-*-*-*-iso10646-1
+!URxvt*font: xft:Monaco:pixelsize=15
+!URxvt*boldFont: xft:Monaco:bold:pixelsize=15
 

@@ -1,0 +1,26 @@
+sticky yes
+snapdist 16
+
+color inactiveborder blue
+color activeborder green
+borderwidth 2
+
+#COMMANDS MENU:
+command Firefox firefox
+command Xterm xterm
+
+# GROUPS
+# 1-MEDIA
+autogroup 1 "sakura,Media"
+# 2-GAMES
+autogroup 2 "sakura,Games"
+# 4-WEB
+autogroup 4 "Firefox"
+#autogroup 4 "sakura,Web"
+# change defaults to "grouponly" (from just group)
+bind-key CM-1 group-only-1
+bind-key CM-2 group-only-2
+bind-key CM-3 group-only-3
+bind-key CM-4 group-only-4
+bind-key CM-5 group-only-5
+bind-key CM-6 group-only-6
