@@ -1,3 +1,4 @@
+map g :s#.*#/* & */$^M
 set exrc
 set ignorecase
 set autoindent
