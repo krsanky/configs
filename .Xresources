@@ -1,12 +1,22 @@
+Xcursor.size: 32
+!Tip: 16, 32, 48 or 64 may also be good size.
+
 XTerm*utf8: 1
 !XTerm.vt100.locale: tru2
 !XTerm.termName: xterm-256color
 XTerm.vt100.saveLines: 10240
 !XTerm.vt100.reverseVideo: true
 XTerm*loginShell: true
+
+
 XTerm*font: -*-terminus-medium-*-*-*-17-*-*-*-*-*-iso10646-1
 !XTerm*boldFont: -*-terminus-medium-*-*-*-17-*-*-*-*-*-iso10646-1
 !XTerm*boldMode: false 
+
+!XTerm*faceName:Terminus*
+!XTerm*faceSize:12
+
+
 !XTerm*geometry: COLUMNSxROWS+X+Y
 XTerm*geometry: 100x30+380+90
 
