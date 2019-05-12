@@ -1,4 +1,5 @@
 #!/bin/sh
+
 #!/usr/local/bin/oksh
 
 
@@ -35,5 +36,12 @@ wmctrl_test1() {
 echo $0
 ht_n_wt
 wmctrl_test1
+
+echo "======="
+z=5
+z=$(expr $z + 1)
+echo $z
+
+
 
 
