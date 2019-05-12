@@ -1,6 +1,6 @@
+#!/bin/sh
 #!/usr/local/bin/oksh
 
-#!/bin/sh
 
 ht_n_wt()
 {
@@ -12,15 +12,14 @@ ht_n_wt()
 	echo "SCREEN_HEIGHT:${SCREEN_HEIGHT}"
 
 	# new width and height
-	W=$(( $SCREEN_WIDTH / 2 - $RIGHTMARGIN ))
-	H=$(( $SCREEN_HEIGHT - 2 * $TOPMARGIN ))
+	#W=$(( $SCREEN_WIDTH / 2 - $RIGHTMARGIN ))
+	#H=$(( $SCREEN_HEIGHT - 2 * $TOPMARGIN ))
 
 	# X, change to move left or right:
 
 	# moving to the right half of the screen:
-	X=$(( $SCREEN_WIDTH / 2 ))
-	# moving to the left:
-	#X=0; 
+	#X=$(( $SCREEN_WIDTH / 2 ))
+
 	echo "X:${X}"
 	#wmctrl -r :ACTIVE: -b remove,maximized_vert,maximized_horz && wmctrl -r :ACTIVE: -e 0,$X,$Y,$W,$H
 
@@ -28,13 +27,13 @@ ht_n_wt()
 	#then use wmctrl to resize your window.
 }
 
-wmctr_test1() {
+wmctrl_test1() {
 	wmctrl -d
 	wmctrl -l
 }
 
 echo $0
 ht_n_wt
-wmctrl_test
+wmctrl_test1
 
 
