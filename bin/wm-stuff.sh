@@ -28,6 +28,13 @@ ht_n_wt()
 	#then use wmctrl to resize your window.
 }
 
+expr_test() {
+	echo "======="
+	z=5
+	z=$(expr $z + 1)
+	echo $z
+}
+
 wmctrl_test1() {
 	wmctrl -d
 	wmctrl -l
@@ -37,10 +44,7 @@ echo $0
 ht_n_wt
 wmctrl_test1
 
-echo "======="
-z=5
-z=$(expr $z + 1)
-echo $z
+expr_test
 
 
 
