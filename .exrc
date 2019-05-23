@@ -1,6 +1,5 @@
 set exrc
 set ignorecase
-set autoindent
 set autowrite
 set nu
 set ruler
