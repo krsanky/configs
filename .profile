@@ -16,5 +16,8 @@ export ENV=$HOME/.kshrc
 /usr/games/fortune -a
 
 #set -o emacs
-set -o vi
+#set -o vi
+
+HISTFILE="$HOME/.ksh_history"
+HISTSIZE=5000
 
