@@ -6,6 +6,8 @@ export PATH
 
 export PS1='${USER}@$(hostname -s):${PWD}\$ '
 
+export EDITOR=vi
+export FCEDIT=vi
 
 #export LC_ALL=en_US.UTF-8
 #export LANG=en_US.UTF-8
