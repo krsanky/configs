@@ -9,7 +9,9 @@ XTerm.vt100.saveLines: 10240
 XTerm*loginShell: true
 
 
-XTerm*font: -*-terminus-medium-*-*-*-17-*-*-*-*-*-iso10646-1
+!XTerm*font: -*-terminus-medium-*-*-*-21-*-*-*-*-*-iso10646-1
+!XTerm*font: -*-terminus-medium-*-*-*-22-*-*-*-*-*-iso10646-1
+XTerm*font: -*-terminus-medium-*-*-*-24-*-*-*-*-*-iso10646-1
 !XTerm*boldFont: -*-terminus-medium-*-*-*-17-*-*-*-*-*-iso10646-1
 !XTerm*boldMode: false 
 

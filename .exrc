@@ -1,4 +1,7 @@
-map g :s#.*#/* & */$^M
+set ts=4
+set sw=4
+
+map g :s#.*#/*&*/$^M
 set exrc
 set ignorecase
 set autowrite
