@@ -21,7 +21,7 @@ export LANGUAGE=en_US.UTF-8
 
 export ENV=$HOME/.kshrc
 
-/usr/games/fortune -a
+fortune -a
 
 #set -o emacs
 #set -o vi
