@@ -17,7 +17,7 @@ export ENV=$HOME/.kshrc
 
 /usr/games/fortune -a
 
-#set -o emacs
+set -o emacs # needed for arrows and history
 #set -o vi
 
 HISTFILE="$HOME/.ksh_history"
