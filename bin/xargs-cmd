@@ -1,0 +1,3 @@
+grep -Rl 'ttown\/base' * | xargs -I {}
+#... | xargs -n1 -I % perl -e 'system("echo 1 %"); system("echo 2 %");'
+

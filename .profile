@@ -10,6 +10,11 @@ export ENV=$HOME/.kshrc
 
 #export MANPATH=$MANPATH:/home/wise/chicken/share/man
 
+export EDITOR=vi
+export FCEDIT=vi
+HISTFILE="$HOME/.ksh_history"
+HISTSIZE=5000
+
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
