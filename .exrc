@@ -9,6 +9,7 @@ set nu
 set ruler
 set showmode
 set showmatch
+set verbose
 
 set leftright
 
