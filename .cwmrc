@@ -7,6 +7,7 @@ borderwidth 2
 
 #COMMANDS MENU:
 command Firefox firefox
+command Epiphany epiphany
 command Xterm 'xterm --class xt-from-menu'
 
 # GROUPS
