@@ -5,19 +5,19 @@ color inactiveborder blue
 color activeborder green
 borderwidth 2
 
+# terminal override
+bind-key CM-Return 'xterm -geometry 100x30-2-2'
+
 #COMMANDS MENU:
 command Firefox firefox
 command Epiphany epiphany
-command Xterm 'xterm --class xt-from-menu'
+command Xterm 'xterm -geometry 100x30-2-2'
 
-# GROUPS
+# GROUPS: use xprop to get these from each program
 # 1-MEDIA
 autogroup 1 "sakura,Media"
-# 2-GAMES
-autogroup 2 "sakura,Games"
 # 4-WEB
-autogroup 4 "Firefox"
-#autogroup 4 "sakura,Web"
+autogroup 4 "Firefox,Epiphany"
 
 # desktops
 bind-key CM-1 group-only-1
