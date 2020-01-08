@@ -1,4 +1,5 @@
 alias ':q'=exit
+alias ':e'=vi
 alias ls='colorls -G'
 alias tma='tmux attach || tmux new'
 alias "I^=complete"

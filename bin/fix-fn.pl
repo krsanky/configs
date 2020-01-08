@@ -1,4 +1,11 @@
-#!/usr/bin/perl
+#!/usr/bin/perl -w
 
-print "asd\n";
+#use 5.022;
+#use warnings;
+use strict;
+use Data::Dumper qw(Dumper);
+
+print "${0}\n"; 
+print Dumper \@ARGV;
+
 
