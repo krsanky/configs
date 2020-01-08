@@ -6,10 +6,10 @@ color activeborder green
 borderwidth 2
 
 # terminal override
-bind-key CM-Return 'xterm -geometry 100x30-2-2'
+bind-key CM-Return 'xterm -geometry 100x40-2-2'
 
 #COMMANDS MENU:
-command Firefox firefox
+command Firefox 'firefox'
 command Epiphany epiphany
 command Xterm 'xterm -geometry 100x30-2-2'
 
@@ -19,13 +19,20 @@ autogroup 1 "sakura,Media"
 # 4-WEB
 autogroup 4 "Firefox,Epiphany"
 
-# desktops
+# desktops (groups)
 bind-key CM-1 group-only-1
 bind-key CM-2 group-only-2
 bind-key CM-3 group-only-3
 bind-key CM-4 group-only-4
 bind-key CM-5 group-only-5
 bind-key CM-6 group-only-6
+bind-key MS-1	window-movetogroup-1
+bind-key MS-2	window-movetogroup-2
+bind-key MS-3	window-movetogroup-3
+bind-key MS-4	window-movetogroup-4
+bind-key MS-5	window-movetogroup-5
+bind-key MS-6	window-movetogroup-6
+
 
 bind-mouse S-1 window-raise
 
