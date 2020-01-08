@@ -1,5 +1,5 @@
 alias ':q'=exit
-alias ls='colorls -G'
+#alias ls='colorls -G'
 alias tma='tmux attach || tmux new'
 alias "I^=complete"
 alias gpom='git push origin master'
