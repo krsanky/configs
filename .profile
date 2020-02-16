@@ -3,6 +3,7 @@ export HOME TERM
 
 PATH=$HOME/bin:$PATH
 PATH=$HOME/go/bin:$PATH
+PATH=$HOME/chicken/bin:$PATH
 export PATH
 
 export PS1='${USER}@$(hostname -s):${PWD}\$ '
