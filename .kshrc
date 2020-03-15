@@ -1,9 +1,10 @@
 alias ':q'=exit
 alias ':e'=vi
-#alias ls='ls -F'
-alias ls='colorls -G'
+alias ls='ls -G'
+#alias ls='colorls -G'
 alias "I^=complete"
 alias gpom='git push origin master'
+alias gca='git commit -am "__gca__"'
 alias goi='go install ./...'
 alias lth='ls -t | head'
 
