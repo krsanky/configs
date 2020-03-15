@@ -1,7 +1,7 @@
 alias ':q'=exit
 alias ':e'=vi
-alias ls='ls -G'
-#alias ls='colorls -G'
+#alias ls='ls -G'
+alias ls='colorls -G'
 alias "I^=complete"
 alias gpom='git push origin master'
 alias gca='git commit -am "__gca__"'
