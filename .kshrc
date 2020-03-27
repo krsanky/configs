@@ -15,3 +15,5 @@ alias cd-t='cd /mnt/nfs/telly/data2/torrent'
 alias tma='tmux attach || tmux new'
 alias trw='tmux rename-window'
 
+alias vba=". venv/bin/activate"
+
