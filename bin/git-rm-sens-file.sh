@@ -4,7 +4,7 @@
 #  "git rm --cached --ignore-unmatch PATH-TO-YOUR-FILE-WITH-SENSITIVE-DATA" \
 #  --prune-empty --tag-name-filter cat -- --all
 
-if [[ $# -lt 1 ]] ; then
+if [ $# -lt 1 ] ; then
 	echo "$0 <file-to-remove-all-traces-of>"
 	exit 1
 fi
