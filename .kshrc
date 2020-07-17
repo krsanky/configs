@@ -1,5 +1,6 @@
 alias ':q'=exit
 alias ':e'=vi
+alias em=emacs
 #alias ls='ls -G'
 alias ls='colorls -G'
 alias "I^=complete"
