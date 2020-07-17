@@ -1,3 +1,8 @@
+query-replace-regexp
+replace-regexp
+
+-----------------
+
 The Emacs way to remove the word one is inside of to press M-backspace
 followed by M-d. That will kill the word at point and save it to
 kill ring (as one unit).
@@ -8,3 +13,4 @@ move between words using commands such as forward-word (M-f) and
 backward-word (M-b), so they will be at the word boundary to begin
 with and thus rarely need to kill the word from the inside.
 
+-----------------
