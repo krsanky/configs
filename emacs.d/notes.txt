@@ -1,0 +1,10 @@
+The Emacs way to remove the word one is inside of to press M-backspace
+followed by M-d. That will kill the word at point and save it to
+kill ring (as one unit).
+
+If the cursor is at the beginning or after the end of the word,
+only one of the two is sufficient. An Emacs user will typically
+move between words using commands such as forward-word (M-f) and
+backward-word (M-b), so they will be at the word boundary to begin
+with and thus rarely need to kill the word from the inside.
+

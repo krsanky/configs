@@ -1,0 +1,149 @@
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'post-forward)
+
+(add-to-list 'load-path "/home/wise/em-lisp")
+
+(setq inhibit-splash-screen t)
+
+(require 'cl)
+
+(global-set-key "\C-x\C-m" 'execute-extended-command)
+(global-set-key "\C-c\C-m" 'execute-extended-command)
+
+;;(set-scroll-bar-mode 'right)
+
+;;(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+;;(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+
+;; NXML
+(load "/home/wise/em-lisp/nxhtml/autostart.el")
+(setq mumamo-chunk-coloring 'no-chunks-colored)
+;; (eval-after-load 'nxhtml '(nxhtml-toggle-visible-warnings))
+;; Workaround the annoying warnings:
+;; Warning (mumamo-per-buffer-local-vars):
+;; Already 'permanent-local t: buffer-file-name
+(when (and (>=  emacs-major-version 24)
+           (>=  emacs-minor-version 2))
+  (eval-after-load "mumamo"
+    '(setq mumamo-per-buffer-local-vars
+           (delq 'buffer-file-name mumamo-per-buffer-local-vars))))
+
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;; CLOJURE
+;;(load "my-clojure")
+;;(autoload 'clojure-mode "clojure-mode" "A major mode for Clojure" t)
+;;(add-to-list 'auto-mode-alist '("\\.clj$" . clojure-mode))
+
+(server-start)
+
+;d ???
+(setq max-specpdl-size 3000)
+
+;;; BASIC ENVIRONMENT
+;;enable syntax high-lighting
+(global-font-lock-mode t)
+(setq tab-width 4)
+(setq basic-indent 4)
+(setq-default indent-tabs-mode nil)
+;; replace highlighted text with what i type
+;; (delete-selection-mode t)
+; (set-background-color "black")
+; (set-foreground-color "white")
+; (set-cursor-color "yellow")
+
+
+;; The mode-line
+(setq line-number-mode t)
+(setq column-number-mode t)
+
+(setq visible-bell t)
+
+(setq delete-old-versions t)
+(setq delete-auto-save-files t)
+
+(fset 'yes-or-no-p 'y-or-n-p)
+
+;; X-windows stuff:
+
+;;Firstly M-x customize the variable x-select-enable-clipboard to t
+;;Then things will go into the X clipboard.  If you do a middle-button
+;;paste it should paste into the remote Emacs (due to the way X works,
+;;not Emacs).
+(setq x-select-enable-clipboard  t ) ;this gets it INTO the x-clipboard
+;;(setq interprogram-paste-function 'x-cut-buffer-or-selection-value) ;this gets it FROM the x-clipboard
+
+(setq mouse-wheel-mode 1)
+
+;; Wheel mouse moves up and down 2 lines
+(define-key global-map [mouse-4] (lambda () (interactive) (scroll-down 2)))
+(define-key global-map [mouse-5] (lambda () (interactive) (scroll-up 2)))
+
+;; with shift it goes faster
+(define-key global-map [(shift mouse-4)] (lambda () (interactive) (scroll-down 50)))
+(define-key global-map [(shift mouse-5)] (lambda () (interactive) (scroll-up 50)))
+
+;; with control it controls the buffer we are looking at
+(define-key global-map [(control mouse-4)] 'next-buffer)
+(define-key global-map [(control mouse-5)] 'bury-buffer)
+
+
+;;; AUTOLOADS
+(autoload `pkw-insert-fn-as-comment "pkw-elisp" "add filename-comment" t)
+(autoload `pkw-insert-fn "pkw-elisp" "add filename-comment" t)
+(autoload `pkw-copy-rectangle       "pkw-elisp" "copy rect."         t)
+
+(autoload `kill-other-buffers "pkw-elisp" "KILL OTHER BUFFERS"  t)
+
+;; supposedly \C-xrr does this too
+(global-set-key "\C-xrp" 'pkw-copy-rectangle)
+
+(global-set-key "\M-g" 'goto-line)
+
+(fset 'copy-line "\C-k\C-xu")
+(global-set-key "\C-l" 'copy-line)
+
+
+;;###############################################################################
+;;---c-stuff-----------
+;;(setq c-default-style "k&r")
+(setq c-default-style '((java-mode . "java") (other . "gnu")))
+
+;; Customizations for all modes in CC Mode.
+(defun my-c-mode-common-hook ()
+  (setq c-basic-offset 4))
+
+(add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
+
+
+(put 'upcase-region 'disabled nil)
+(put 'downcase-region 'disabled nil)
+
+
+(custom-set-variables
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(frame-background-mode (quote dark))
+ '(indent-region-mode t)
+ '(mumamo-chunk-coloring (quote no-chunks-colored))
+ '(mumamo-global-mode t)
+ '(nxhtml-global-minor-mode t)
+ '(nxhtml-skip-welcome t)
+ '(speedbar-default-position (quote left))
+ '(truncate-lines t))
+
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(default ((t (:stipple nil :background "black" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 116 :width normal))))
+ '(mumamo-background-chunk-major ((t nil)))
+ '(mumamo-background-chunk-submode1 ((t nil))))
+
+
+;;put this last because something else gets in the way
+(set-default-font "-*-terminus-medium-*-*-*-20-*-*-*-*-*-*-*")
