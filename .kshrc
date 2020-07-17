@@ -1,8 +1,9 @@
 alias ':q'=exit
 alias ':e'=vi
 alias em=emacs
-#alias ls='ls -G'
-alias ls='colorls -G'
+alias en="emacs -nw"
+alias ls='ls -G'
+#alias ls='colorls -G'
 alias "I^=complete"
 alias gpom='git push origin master'
 alias gca='git commit -am "__gca__"'
