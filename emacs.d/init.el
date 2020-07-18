@@ -15,22 +15,31 @@
 (setq column-number-mode             t)
 
 (show-paren-mode 1)
+(setq show-trailing-whitespace t)
+
+;; turn off colors / syntax highlighting
+(global-font-lock-mode 0)
+
+
+;; package stuff MELPA
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
+;; and `package-pinned-packages`. Most users will not need or want to do this.
+;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(package-initialize)
+
 
 ;; -- TABS / SPACES --------------------------------------
-(setq tab-width 4 indent-tabs-mode nil)
-
-;; set default tab char's display width to 4 spaces
+;; (setq tab-width 4 indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq-default indent-tabs-mode nil)
-
 ;; make tab key always call a indent command.
-(setq-default tab-always-indent t)
-
+;;(setq-default tab-always-indent t)
 ;; make tab key call indent command or insert tab character, depending on cursor position
-(setq-default tab-always-indent nil)
-
+;;(setq-default tab-always-indent nil)
 ;; make tab key do indent first then completion.
-(setq-default tab-always-indent 'complete)
+;;(setq-default tab-always-indent 'complete)
 
 
 ;; GUI ------------------------------------------
@@ -59,3 +68,17 @@
 (savehist-mode 1)
 (setq savehist-additional-variables '(kill-ring search-ring regexp-search-ring))
 (setq savehist-file "~/.emacs.d/savehist")
+
+;; ---- this is the auto stuff
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages (quote (elpy))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

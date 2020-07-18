@@ -1,7 +1,8 @@
 alias ':q'=exit
 alias ':e'=vi
-alias em=emacs
-alias en="emacs -nw"
+alias em="emacs -nw"
+alias ecn="emacsclient -n"
+alias et="emacsclient -t"
 alias ls='ls -G'
 #alias ls='colorls -G'
 alias "I^=complete"

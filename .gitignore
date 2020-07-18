@@ -1,3 +1,4 @@
 bin/exercism
 bin/lein
 emacs.d/savehist
+emacs.d/elpa/
