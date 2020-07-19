@@ -3,8 +3,8 @@ alias ':e'=vi
 alias em="emacs -nw"
 alias ecn="emacsclient -n"
 alias et="emacsclient -t"
-alias ls='ls -G'
-#alias ls='colorls -G'
+#alias ls='ls -G'
+alias ls='colorls -G'
 alias "I^=complete"
 alias gpom='git push origin master'
 alias gca='git commit -am "__gca__"'
@@ -20,3 +20,7 @@ alias trw='tmux rename-window'
 
 alias vba=". venv/bin/activate"
 
+esweep() {
+    #echo "sweep up emacs tmp files"
+    rm -f *~
+}
