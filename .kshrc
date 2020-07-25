@@ -21,6 +21,5 @@ alias trw='tmux rename-window'
 alias vba=". venv/bin/activate"
 
 esweep() {
-    #echo "sweep up emacs tmp files"
     rm -f *~
 }

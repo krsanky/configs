@@ -1,6 +1,9 @@
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward)
 
+(when (version<= "26.0.50" emacs-version )
+  (global-display-line-numbers-mode))
+
 (server-start)
 
 (global-set-key "\M-g" 'goto-line)
@@ -32,8 +35,12 @@
 
 ;; -- TABS / SPACES --------------------------------------
 ;; (setq tab-width 4 indent-tabs-mode nil)
-(setq-default tab-width 4)
+(setq-default tab-width 2)
 (setq-default indent-tabs-mode nil)
+;;(setq-default c-basic-offset 4)
+(defvaralias 'c-basic-offset 'tab-width)
+(defvaralias 'cperl-indent-level 'tab-width)
+
 ;; make tab key always call a indent command.
 ;;(setq-default tab-always-indent t)
 ;; make tab key call indent command or insert tab character, depending on cursor position
