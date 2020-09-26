@@ -2,3 +2,4 @@ bin/exercism
 bin/lein
 emacs.d/savehist
 emacs.d/elpa/
+emacs.d/auto-save-list/
